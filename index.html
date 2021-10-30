@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<h1>
+Gallelee Thimotus. Favorite Hobbies: Building PC's and modifying cars. The current time is : <span id='time'></span>
+<script>
+function ttpTime(){
+	let date = new Date();
+	let hours = date.getHours();
+	hours = hours % 12;
+	let min = date.getMinutes();
+	min = min<10? "0" + min : min;
+	let sec = date.getSeconds();
+	sec = sec<10? "0" + sec : sec;
+	document.getElementById("time").innerHTML = hours+":"+min+":"+sec;
+}
+let ftime = setInterval(ttpTime,1000);
+</script>
+</h1>
+</html>
